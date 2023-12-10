@@ -82,11 +82,11 @@
                 <div class="col">
                     <label><b>STATUS</b></label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="status" id="status" value="1">
+                        <input class="form-check-input" type="radio" name="status" id="status" value="1" required>
                         <label class="form-check-label mr-4" for="status">
                             DITERIMA
                         </label>
-                        <input class="form-check-input" type="radio" name="status" id="status" value="2">
+                        <input class="form-check-input" type="radio" name="status" id="status" value="2" required>
                         <label class="form-check-label" for="status">
                             DITOLAK
                         </label>

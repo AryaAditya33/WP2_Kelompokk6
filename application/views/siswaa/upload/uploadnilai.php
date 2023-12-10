@@ -11,7 +11,7 @@
                 <div class="row mb-3">
                     <div class="col">
                         <div class="form-group justify-content-center">
-                            <label for="nilai_siswa" class=" form-control-label">UPLOAD NILAI (PNG/JPG/JPEG) (Max 3MB)</label>
+                            <label for="nilai_siswa" class=" form-control-label">UPLOAD NILAI (PNG/JPG/JPEG) (MAX 3MB)</label>
                             <input type="file" id="nilai_siswa" name="nilai_siswa" class="form-control-file" required>
                         </div>
                     </div>

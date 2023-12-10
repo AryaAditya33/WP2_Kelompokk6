@@ -34,6 +34,8 @@ class Lengkapi extends CI_Controller {
 			$this->form_validation->set_rules($rules);
 
 			if($this->form_validation->run() === FALSE){
+				$this->session->set_flashdata('messageEditLd', '<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"
+                aria-label="Close"><span aria-hidden="true">&times;</span></button>GAGAL UPDATE!</div>');
 				redirect(site_url('students/lengkapi/edit_data'));
 			}
 
@@ -57,8 +59,8 @@ class Lengkapi extends CI_Controller {
 			];
 
 			if($this->siswa_model->updateDt($new_data)){
-				$this->session->set_flashdata('messageEdit', '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"
-                aria-label="Close"><span aria-hidden="true">&times;</span></button>BERHASIL DISIMPAN!</div>');
+				$this->session->set_flashdata('messageEditLd', '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"
+                aria-label="Close"><span aria-hidden="true">&times;</span></button>BERHASIL DI UPDATE!</div>');
 				redirect(site_url('students/lengkapi/edit_data'));
 			}
 		}

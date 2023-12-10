@@ -32,7 +32,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col">
-                                    <label for="jenis_kelamin">Jenis Kelamin</label>
+                                    <label for="jenis_kelamin">Jenis Kelamin (<?= htmlentities($current_user2->jenis_kelamin)?>)</label>
                                     <select name="jenis_kelamin" id="jenis_kelamin" class="form-control <?= form_error('jenis_kelamin') ? 'is-invalid':'' ?>" value="<?= set_value('jenis_kelamin')?>">
                                         <option value="">Pilih Agama</option>
                                         <option value="Laki-Laki" selected>Laki-Laki</option>
@@ -43,21 +43,21 @@
                                         <?= form_error('jurusan') ?>
                                     </div>
                                 <div class="col">
-                                    <label for="agama">Agama</label>
+                                    <label for="agama">Agama (<?= htmlentities($current_user2->agama)?>)</label>
                                     <select name="agama" id="agama" class="form-control <?= form_error('agama') ? 'is-invalid':'' ?>" value="<?= set_value('agama')?>">
                                         <option value="">Pilih Agama</option>
-                                        <option value="Islam" <?php echo set_select('agama', 'Islam');?>>Islam</option>
-                                        <option value="Kristen" <?php echo set_select('agama', 'Kristen');?>>Kristen</option>
-                                        <option value="Katolik" <?php echo set_select('agama', 'Katolik');?>>Katolik</option>
-                                        <option value="Hindu" <?php echo set_select('agama', 'Hindu');?>>Hindu</option>
-                                        <option value="Buddha" <?php echo set_select('agama', 'Buddha');?>>Budha</option>
+                                        <option value="Islam">Islam</option>
+                                        <option value="Kristen">Kristen</option>
+                                        <option value="Katolik">Katolik</option>
+                                        <option value="Hindu">Hindu</option>
+                                        <option value="Buddha">Budha</option>
                                     </select>
                                 </div>
                                 <div class="invalid-feedback">
                                     <?= form_error('agama') ?>
                                 </div>
                                 <div class="col">
-                                    <label for="jurusan">Jurusan</label>
+                                    <label for="jurusan">Jurusan (<?= htmlentities($current_user2->jurusan)?>)</label>
                                     <select name="jurusan" id="jurusan" class="form-control <?= form_error('jurusan') ? 'is-invalid':'' ?>" value="<?= set_value('jurusan')?>">
                                         <option value="">Pilih Jurusan</option>
                                         <option value="IPA" <?php echo set_select('jurusan', 'IPA');?>>IPA</option>

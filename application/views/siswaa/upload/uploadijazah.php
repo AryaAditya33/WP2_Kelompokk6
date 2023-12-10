@@ -11,7 +11,7 @@
             <div class="row mb-3">
                 <div class="col">
                     <div class="form-group">
-                        <label for="ijazah" class=" form-control-label">UPLOAD IJAZAH (PNG/JPG)</label>
+                        <label for="ijazah" class=" form-control-label">UPLOAD IJAZAH (PNG/JPG/JPEG) (MAX 3MB)</label>
                         <input type="file" id="ijazah" name="ijazah" class="form-control-file" required>
                     </div>
                 </div>

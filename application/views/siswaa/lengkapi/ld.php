@@ -8,7 +8,7 @@
                 </div>
                 <div class="market-status-table mt-2">
                     <div class="table-responsive" style="overflow-x:hidden;">
-                        <?php echo $this->session->flashdata('messageEdit');?>
+                        <?php echo $this->session->flashdata('messageEditLd');?>
                         <form action="<?php base_url('students/lengkapi/edit_data') ?>" method="post" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col">

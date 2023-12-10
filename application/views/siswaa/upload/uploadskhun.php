@@ -11,7 +11,7 @@
             <div class="row mb-3">
                 <div class="col">
                     <div class="form-group justify-content-center">
-                        <label for="skhun" class=" form-control-label">UPLOAD SKHUN (PNG/JPG)</label>
+                        <label for="skhun" class=" form-control-label">UPLOAD SKHUN (PNG/JPG/JPEG) (MAX 3MB)</label>
                         <input type="file" id="skhun" name="skhun" class="form-control-file" required>
                     </div>
                 </div>
