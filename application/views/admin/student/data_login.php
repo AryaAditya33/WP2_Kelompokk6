@@ -1,6 +1,8 @@
                             <!-- DataTales Example -->
                             <div class="card shadow-sm mb-4">
                                 <div class="card-body">
+                                    <h3 class="font-weight-bold">DATA AKUN SISWA</h3>
+                                    <hr>
                                     <div class="table-responsive-sm">
                                         <table class="table table-bordered table-sm" id="dataTable" width="100%" cellspacing="0">
                                             <thead class="thead-dark">

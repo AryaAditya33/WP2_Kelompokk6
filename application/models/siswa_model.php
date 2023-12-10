@@ -216,6 +216,30 @@ class Siswa_model extends CI_Model
         }
     }
 
+    public function hitungJurusanIpa()
+    {
+        $query = $this->db->get_where('siswa', ['jurusan' => 'IPA']);
+        if($query->num_rows()>0){
+            return $query->num_rows();        
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    public function hitungJurusanIps()
+    {
+        $query = $this->db->get_where('siswa', ['jurusan' => 'IPS']);
+        if($query->num_rows()>0){
+            return $query->num_rows();        
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
     public function saveReg($data)
 	{
 		return $this->db->insert($this->_table, $data);
@@ -229,10 +253,12 @@ class Siswa_model extends CI_Model
 		return $this->db->update($this->_table, $data, ['id_siswa' => $data['id_siswa']]);
 	}
 
-    public function getData()
-    {
-        $query = $this->db->query("SELECT * FROM siswa ORDER BY id_siswa ASC");
 
-        return $query->result();
+    public function update($table, $data, $where)
+    {
+        $this->db->where($where)
+                ->update($table, $data);
+            return TRUE;
     }
+
 }

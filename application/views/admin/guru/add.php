@@ -8,7 +8,7 @@
 				</div>
 
 					<div class="card-body border border-info">
-						<?php echo $this->session->flashdata('messageEdSt');?>
+						<?php echo $this->session->flashdata('messageAddGuru');?>
 						<form action="<?php base_url('admin/guru/add') ?>" method="POST"  enctype="multipart/form-data">
 							<div class="form-group row">
                             <div class="col-md-6">

@@ -23,7 +23,7 @@
                                             <th class="text-center">Username</th>
                                             <th class="text-center">Created</th>
                                             <th class="text-center">Login</th>
-                                            <th class="text-center">Action</th>
+                                            <th class="text-center">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -32,27 +32,25 @@
                                         ?>
                                         <?php foreach ($user as $product): ?>
                                         <tr>
-                                            <td width="100" class="text-center pt-4"><?php echo $no++ ?></td>
-                                            <td width="220" class="text-center pt-4">
+                                            <td width="" class="text-center"><?php echo $no++ ?></td>
+                                            <td width="" class="text-center">
                                                 <?php echo $product->name ?>
                                             </td>
-                                            <td width="250" class="text-center pt-4">
+                                            <td width="" class="text-center">
                                                 <?php echo $product->email ?>
                                             </td>
-                                            <td width="120" class="text-center pt-4">
+                                            <td width="" class="text-center">
                                                 <?php echo $product->username ?>
                                             </td>
-                                            <td width="200" class="text-center pt-4">
+                                            <td width="" class="text-center">
                                                 <?php echo $product->created_at ?>
                                             </td>
-                                            <td width="190" class="text-center pt-3">
+                                            <td width="" class="text-center">
                                                 <?php echo $product->last_login ?>
                                             </td>
-                                            <td width="110">
-											    <a href="<?php echo site_url('admin/user/edit/'.$product->id_user) ?>"
-											 class="btn btn-small text-info"><i class="fas fa-edit"></i> Edit</a>
+                                            <td width="50">
 											    <a onclick="deleteConfirm('<?php echo site_url('admin/user/delete/'.$product->id_user) ?>')"
-											href="#!" class="btn btn-small text-danger text-center"><i class="fas fa-trash"></i> Hapus</a>
+											href="#!" class="btn btn-small btn-danger text-center font-weight-bold"><i class="fas fa-trash"></i></a>
 										    </td>
 									    </tr>
 									    <?php endforeach; ?>

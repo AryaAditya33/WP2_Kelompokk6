@@ -67,7 +67,7 @@ class guru_model extends CI_Model
     public function update()
     {
         $post = $this->input->post();
-        $this->id_guru = $post["id_guru"];
+        $this->id_guru = $post["id"];
         $this->kode_guru = $post["kode_guru"];
         $this->nama_guru = $post["nama_guru"];
         $this->mapel = $post["mapel"];

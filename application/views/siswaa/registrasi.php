@@ -53,9 +53,9 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
-              <a class="nav-item nav-link mr-3" href="#">HOME</a>
+              <a class="nav-item nav-link mr-3" href="<?php echo site_url('home') ?>">HOME</a>
               <a class="nav-item nav-link mr-3" href="#">INFORMASI</a>
-              <a class=" btn btn-success font-weight-bold float-right rounded-pill" href="login.php">LOGIN</a>
+              <a class=" btn btn-success font-weight-bold float-right rounded-pill" href="<?php echo site_url('auth/login_siswa') ?>">LOGIN</a>
             </div>
           </div>
         </div>
@@ -68,7 +68,7 @@
           <div class="card-body p-0">
             <div class="row">
               <div class="col-md-12 border border-white">
-                <div class="p-5">
+                <div class="p-3">
                   <div class="text-center">
                   <h1 class="h3 font-weight-bold">FORM REGISTRASI SISWA BARU</h1>
                     <p class="mb-4">HARAP MASUKKAN DATA DIRI DENGAN BENAR!</p>
@@ -79,7 +79,7 @@
                     <div class="form-group row">
                         <div class="col-md-6">
                           <label for="nisn">Nisn</label>
-                          <input type="text" class="form-control <?= form_error('nisn') ? 'is-invalid':'' ?>" placeholder="NISN" name="nisn" value="<?= set_value('nisn')?>">
+                          <input type="text" class="form-control <?= form_error('nisn') ? 'is-invalid':'' ?>" placeholder="" name="nisn" value="<?= set_value('nisn')?>">
                         </div>
                           <div class="invalid-feedback">
                             <?= form_error('nisn') ?>
@@ -87,7 +87,7 @@
                         
                           <div class="col-md-6">
                             <label for="nik">NIK</label>
-                            <input type="text" class="form-control <?= form_error('nik') ? 'is-invalid':'' ?>" id="nik" placeholder="Nomor Induk Kependudukan" name="nik" value="<?= set_value('nik')?>">
+                            <input type="text" class="form-control <?= form_error('nik') ? 'is-invalid':'' ?>" id="nik" placeholder="" name="nik" value="<?= set_value('nik')?>">
                           </div>
                           <div class="invalid-feedback">
                               <?= form_error('nik') ?>
@@ -97,14 +97,14 @@
                     <div class="form-group row">
                         <div class="col-md-6">
                             <label for="nama_siswa">Nama Siswa</label>
-                            <input type="text" class="form-control <?= form_error('nama_siswa') ? 'is-invalid':'' ?>" id="nama_siswa" placeholder="Nama Lengkap" name="nama_siswa" value="<?= set_value('nama_siswa')?>">
+                            <input type="text" class="form-control <?= form_error('nama_siswa') ? 'is-invalid':'' ?>" id="nama_siswa" placeholder="" name="nama_siswa" value="<?= set_value('nama_siswa')?>">
                         </div>
                         <div class="invalid-feedback">
                             <?= form_error('nama_siswa') ?>
                         </div>
                         <div class="col-md-6">
                             <label for="email">Email Anda</label>
-                            <input type="text" class="form-control <?= form_error('email') ? 'is-invalid':'' ?>" id="email" placeholder="Email" name="email" value="<?= set_value('email')?>">
+                            <input type="text" class="form-control <?= form_error('email') ? 'is-invalid':'' ?>" id="email" placeholder="" name="email" value="<?= set_value('email')?>">
                         </div>
                         <div class="invalid-feedback">
                             <?= form_error('email') ?>
@@ -113,14 +113,14 @@
                     <div class="form-group row">
                         <div class="col-md-6">
                             <label for="kota_lahir">Tempat Lahir</label>
-                            <input type="text" class="form-control  <?= form_error('kota_lahir') ? 'is-invalid':'' ?>" id="kota_lahir" placeholder="Kota Kelahiran" name="kota_lahir" value="<?= set_value('kota_lahir')?>">
+                            <input type="text" class="form-control  <?= form_error('kota_lahir') ? 'is-invalid':'' ?>" id="kota_lahir" placeholder="" name="kota_lahir" value="<?= set_value('kota_lahir')?>">
                         </div>
                         <div class="invalid-feedback">
                             <?= form_error('kota_lahir') ?>
                         </div>
                         <div class="col-md-6">
                             <label for="tanggal_lahir">Tanggal Lahir</label>
-                            <input type="text" class="form-control datepicker <?= form_error('tanggal_lahir') ? 'is-invalid':'' ?>" id="tanggal_lahir" placeholder=" Tanggal Lahir"  name="tanggal_lahir" value="<?= set_value('tanggal_lahir')?>">
+                            <input type="text" class="form-control datepicker <?= form_error('tanggal_lahir') ? 'is-invalid':'' ?>" id="tanggal_lahir" placeholder=""  name="tanggal_lahir" value="<?= set_value('tanggal_lahir')?>">
                         </div>
                         <div class="invalid-feedback">
                             <?= form_error('tanggal_lahir') ?>
@@ -166,7 +166,7 @@
                     <div class="form-group row">
                         <div class="col-md-6">
                             <label for="asal_sekolah">Asal Sekolah</label>
-                            <input type="text" class="form-control  <?= form_error('asal_sekolah') ? 'is-invalid':'' ?>" id="asal_sekolah" placeholder="Sekolah Asal" name="asal_sekolah" value="<?= set_value('asal_sekolah')?>">
+                            <input type="text" class="form-control  <?= form_error('asal_sekolah') ? 'is-invalid':'' ?>" id="asal_sekolah" placeholder="" name="asal_sekolah" value="<?= set_value('asal_sekolah')?>">
                         </div>
                         <div class="invalid-feedback">
                             <?= form_error('asal_sekolah') ?>
@@ -193,14 +193,14 @@
                     <div class="form-group row">
                         <div class="col-md-6">
                             <label for="no_handphone">NO HP</label>
-                            <input name="no_handphone" type="text" class="form-control <?= form_error('no_handphone') ? 'is-invalid':'' ?>" id="no_handphone" placeholder="Nomor HP" value="<?= set_value('no_handphone')?>">
+                            <input name="no_handphone" type="text" class="form-control <?= form_error('no_handphone') ? 'is-invalid':'' ?>" id="no_handphone" placeholder="" value="<?= set_value('no_handphone')?>">
                         </div>
                         <div class="invalid-feedback">
                           <?= form_error('no_handphone') ?>
                         </div>
                         <div class="col-md-6">
                             <label for="nama_wali">Nama Wali</label>
-                            <input type="text" class="form-control  <?= form_error('nama_wali') ? 'is-invalid':'' ?>" id="nama_wali" placeholder="Nama Wali" name="nama_wali" value="<?= set_value('nama_wali')?>">
+                            <input type="text" class="form-control  <?= form_error('nama_wali') ? 'is-invalid':'' ?>" id="nama_wali" placeholder="" name="nama_wali" value="<?= set_value('nama_wali')?>">
                         </div>
                         <div class="invalid-feedback">
                             <?= form_error('nama_wali') ?>
@@ -208,15 +208,15 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-md-6">
-                            <label for="nama_ayah">Nama Ayah</label>
-                            <input name="nama_ayah" type="text" class="form-control <?= form_error('nama_ayah') ? 'is-invalid':'' ?>" id="nama_ayah" placeholder="Nama Ayah" value="<?= set_value('nama_ayah')?>">
+                            <label for="nama_ayah" >Nama Ayah</label>
+                            <input name="nama_ayah" type="text" class="form-control <?= form_error('nama_ayah') ? 'is-invalid':'' ?>" id="nama_ayah" placeholder="" value="<?= set_value('nama_ayah')?>">
                         </div>
                         <div class="invalid-feedback">
                           <?= form_error('nama_ayah') ?>
                         </div>
                         <div class="col-md-6">
-                            <label for="nama_ibu">Nama Wali</label>
-                            <input type="text" class="form-control  <?= form_error('nama_ibu') ? 'is-invalid':'' ?>" id="nama_ibu" placeholder="Nama Ibu" name="nama_ibu" value="<?= set_value('nama_ibu')?>">
+                            <label for="nama_ibu">Nama Ibu</label>
+                            <input type="text" class="form-control  <?= form_error('nama_ibu') ? 'is-invalid':'' ?>" id="nama_ibu" placeholder="" name="nama_ibu" value="<?= set_value('nama_ibu')?>">
                         </div>
                         <div class="invalid-feedback">
                             <?= form_error('nama_ibu') ?>
@@ -225,14 +225,14 @@
                     <div class="form-group row">
                         <div class="col-md-6">
                             <label for="password">Password</label>
-                            <input name="password" type="password" class="form-control <?= form_error('password') ? 'is-invalid':'' ?>" id="password" placeholder="Password" value="<?= set_value('password')?>">
+                            <input name="password" type="password" class="form-control <?= form_error('password') ? 'is-invalid':'' ?>" id="password" placeholder="" value="<?= set_value('password')?>">
                         </div>
                         <div class="invalid-feedback">
                           <?= form_error('password') ?>
                         </div>
                         <div class="col-md-6 mb-2">
                             <label for="ulangi_password">Ulangi Password</label>
-                            <input name="ulangi_password" type="password" class="form-control <?= form_error('ulangi_password') ? 'is-invalid':'' ?>" id="ulangi_password" placeholder="Ulangi Password" value="<?= set_value('ulangi_password')?>">
+                            <input name="ulangi_password" type="password" class="form-control <?= form_error('ulangi_password') ? 'is-invalid':'' ?>" id="ulangi_password" placeholder="" value="<?= set_value('ulangi_password')?>">
                         </div>
                         <div class="invalid-feedback">
                           <?= form_error('ulangi_password') ?>
@@ -248,10 +248,16 @@
             </div>
           </div>
         </div>
-
       </div>
 
   </div>
+  <footer>
+      <div class="text-center py-4 bg-white">
+        <div class="container">
+          <span class="text-muted">Copyright @2023 NewStudentInformation</span>
+        </div>
+      </div>
+    </footer>
   
   
 
@@ -280,6 +286,7 @@
     });
   </script>
 </body>
+
 
 
 </html>

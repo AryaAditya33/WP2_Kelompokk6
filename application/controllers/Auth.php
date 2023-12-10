@@ -50,7 +50,8 @@ class Auth extends CI_Controller
 		if($this->auths_model->login($email, $password)){
 			redirect('students/dashboard');
 		} else {
-			$this->session->set_flashdata('danger', 'Login Gagal, pastikan username dan password benar!');
+			$this->session->set_flashdata('messageLoginSiswa', '<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"
+                aria-label="Close"><span aria-hidden="true">&times;</span></button>PASSWORD SALAH!</div>');
 		}
 
 		$this->load->view('siswaa/login');

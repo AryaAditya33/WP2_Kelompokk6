@@ -36,13 +36,7 @@
 
 </head>
 
-<?php if($this->session->flashdata('message_login_error')): ?>
-	<div class="invalid-feedback">
-		<?= $this->session->flashdata('message_login_error') ?>
-	</div>
-<?php endif ?>
-
-<body">
+<body>
     <header>
         <nav
             class="navbar shadow-sm navbar-expand-lg navbar-light bg-white pt-4 pb-4">
@@ -60,7 +54,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
-              <a class="nav-item nav-link mr-3 btn btn-success text-white" href="#"><i class="fas fa-edit"></i> HOME</a>
+            <a class="nav-item nav-link font-weight-bold" href="<?php echo site_url('home') ?>"><i class="fas fa-home"></i> HOME</a>
             </div>
             </div>
         </nav>
@@ -77,8 +71,8 @@
                             <div class="col-lg">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-1200 font-weight-bold "><i class="fas fa-laptop-code"></i> &nbsp;NEW STUDENT INFORMATION</h1>
-                                        <p class="text-sm text-gray">-- SILAHKAN LOGIN --</p>
+                                        <h1 class="h4 text-gray-1200 font-weight-bold "><i class="fas fa-user"></i> &nbsp;HALAMAN LOGIN ADMIN</h1>
+                                        <p class="text-sm text-gray mb-4">-- SILAHKAN LOGIN --</p>
                                     </div>
                                     <?php echo $this->session->flashdata('messageLogin');?>
                                     <form action="" method="post">
@@ -103,25 +97,31 @@
                                         </button>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                        <p class="small">WELCOME BACK!</p>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
+                                        <p class="small text-white">HI!</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </div>
+</body>
+    <footer>
+      <div class="text-center py-4 bg-white">
+        <div class="container">
+          <span class="text-muted">Copyright @2023 NewStudentInformation</span>
+        </div>
+      </div>
+    </footer>
 
 <?php $this->load->view("admin/_partials/modal.php") ?>
 <!--JAVASCRIPT -->
 <?php $this->load->view("admin/_partials/js.php") ?>
+
 
 </html>

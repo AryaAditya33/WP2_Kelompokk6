@@ -31,7 +31,7 @@
 					Name: <span class="text-gray"><?= html_escape($current_user->name) ?></span>
 					<br>
 					Email: <span class="text-gray"><?= html_escape($current_user->email) ?></span>
-                    <a href="<?= site_url('admin/setting/edit_profile') ?>" class="btn btn-success float-right" role="button" aria-pressed="true">Edit Data</a>
+                    <a href="<?= site_url('admin/setting/edit_profile') ?>" class="btn btn-success float-right font-weight-bold" role="button" aria-pressed="true">EDIT DATA</a>
 				</div>
 			</div>
 			<div class="card shadow-sm mb-4">
@@ -42,7 +42,7 @@
 					Your Password: <span class="text-gray">******</span>
 					<br>
 					Last Changed: <span class="text-gray">22-08-2020</span>
-					<a href="<?= site_url('admin/setting/changePassword') ?>" class="btn btn-success float-right" role="button" aria-pressed="true">Edit Data</a>
+					<a href="<?= site_url('admin/setting/changePassword') ?>" class="btn btn-success float-right font-weight-bold" role="button" aria-pressed="true">EDIT DATA</a>
 				</div>
 			</div>
     </div>

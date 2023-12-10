@@ -8,7 +8,7 @@
                 </ol>
             </nav>
         </div>
-
+                            <?php echo $this->session->flashdata('messageHpsGuru');?>
                             <div class="card shadow-sm mb-4">
                                 <div class="card-body">
                                     <h3 class="font-weight-bold">DATA DIRI GURU</h3>
@@ -50,9 +50,9 @@
                                                     </td>
                                                     <td width="100">
                                                     <a href="<?php echo site_url('admin/guru/edit/'.$product->id_guru) ?>"
-											            class="btn btn-small text-info"><i class="fas fa-edit"></i> Edit</a>
+											            class="btn btn-small text-info font-weight-bold"><i class="fas fa-edit"></i> EDIT</a>
                                                         <a onclick="deleteConfirm('<?php echo site_url('admin/guru/delete/'.$product->id_guru) ?>')"
-                                                    href="#!" class="btn btn-small text-danger text-center"><i class="fas fa-trash"></i> Hapus</a>
+                                                    href="#!" class="btn btn-small text-danger text-center font-weight-bold"><i class="fas fa-trash"></i> HAPUS</a>
                                                     </td>
                                                 </tr>
                                                 <?php endforeach; ?>

@@ -36,7 +36,7 @@
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                                             CALON SISWA JURUSAN IPA</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">2</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total_ipa; ?></div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-user-alt fa-2x text-gray-300"></i>
@@ -53,7 +53,7 @@
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                             CALON SISWA JURUSAN IPS</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total_ips; ?></div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-user-friends fa-2x text-gray-300"></i>
@@ -95,28 +95,39 @@
 
                         <div class="card shadow-sm mb-4">
                             <div class="card-body">
-                                <h3 class="">DATA LOGIN ADMIN</h3>
+                                <h3 class="">DATA VERIFIKASI SISWA</h3>
                                 <hr>
                                 <div class="table-responsive-lg">
                                         <table class="table table-bordered table-striped table-lg" id="dataTable" width="100%" cellspacing="0">
                                             <thead class="thead-dark">
                                                 <tr>
-                                                    <th class="text-center">Email</th>
-                                                    <th class="text-center">Username</th>
-                                                    <th class="text-center">Terakhir Login</th>
+                                                    <th class="text-center">NISN</th>
+                                                    <th class="text-center">NAMA</th>
+                                                    <th class="text-center">STATUS</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <?php foreach ($user as $product): ?>
+                                                <?php foreach ($siswa as $product): ?>
                                                 <tr>
                                                     <td height="50" class="text-center pt-4">
-                                                        <?php echo $product->email ?>
+                                                        <?php echo $product->nisn ?>
                                                     </td>
                                                     <td height="50" class="text-center pt-4">
-                                                        <?php echo $product->username ?>
+                                                        <?php echo $product->nama_siswa ?>
                                                     </td>
                                                     <td height="50" class="text-center pt-4">
-                                                        <?php echo $product->last_login ?>
+                                                    <?php 
+                                                        if($product->status == null)
+                                                        {
+                                                            ?>
+                                                                <span class="badge badge-warning badge-small">PENDING</span>
+                                                            <?php
+                                                        }
+                                                        else
+                                                        {
+                                                        echo $product->status == 1 ? '<span class="badge badge-success">DITERIMA</span>' : '<span class="badge badge-danger">DITOLAK</span>';
+                                                        }
+                                                    ?>
                                                     </td>
                                                 </tr>
                                                 <?php endforeach; ?>

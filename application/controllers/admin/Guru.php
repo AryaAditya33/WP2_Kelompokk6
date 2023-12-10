@@ -34,7 +34,8 @@ class Guru extends CI_Controller
 
         if ($validation->run()) {
             $student->save();
-            $this->session->set_flashdata('success', 'Berhasil disimpan');
+            $this->session->set_flashdata('messageAddGuru', '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"
+            aria-label="Close"><span aria-hidden="true">&times;</span></button>BERHASIL DISIMPAN!</div>');
         }
 
         $this->load->view("admin/_partials/head.php");
@@ -51,7 +52,7 @@ class Guru extends CI_Controller
     {
         $data['current_user'] = $this->auth_model->current_user();
         $data['current_user2'] = $this->guru_model->getById($id);
-        if (!isset($id)) redirect('admin/siswa');
+        if (!isset($id)) redirect('admin/guru');
        
         $student = $this->guru_model;
         $validation = $this->form_validation;
@@ -59,7 +60,8 @@ class Guru extends CI_Controller
 
         if ($validation->run()) {
             $student->update();
-            $this->session->set_flashdata('success', 'Berhasil disimpan');
+            $this->session->set_flashdata('messageEditGuru', '<div class="alert alert-warning alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"
+            aria-label="Close"><span aria-hidden="true">&times;</span></button>BERHASIL DI UPDATE!</div>');
         }
 
         $data["student"] = $student->getById($id);
@@ -79,7 +81,9 @@ class Guru extends CI_Controller
         if (!isset($id)) show_404();
         
         if ($this->guru_model->delete($id)) {
-            redirect(site_url('admin/siswa/'));
+            $this->session->set_flashdata('messageHpsGuru', '<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"
+            aria-label="Close"><span aria-hidden="true">&times;</span></button>DATA GURU BERHASIL DIHAPUS!</div>');
+            redirect(site_url('admin/guru/'));
         }
     }
 }

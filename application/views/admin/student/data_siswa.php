@@ -1,4 +1,5 @@
                             <!-- DataTales Example -->
+                            <?php echo $this->session->flashdata('messageDetail');?>
                             <div class="card shadow-sm mb-4">
                                 <div class="card-body">
                                     <h3 class="font-weight-bold">DATA PRIBADI SISWA</h3>
@@ -11,7 +12,6 @@
                                                     <th class="text-center">NISN</th>
                                                     <th class="text-center">Nama</th>
                                                     <th class="text-center">TL</th>
-                                                    <th width="" class="text-center">Jenis Kel</th>
                                                     <th width="" class="text-center">Agama</th>
                                                     <th width="" class="text-center">Kota Lahir</th>
                                                     <th class="text-center">Alamat</th>
@@ -35,9 +35,6 @@
                                                         <?php echo $product->tanggal_lahir ?>
                                                     </td>
                                                     <td width="" class="text-center">
-                                                        <?php echo $product->jenis_kelamin ?>
-                                                    </td>
-                                                    <td width="" class="text-center">
                                                         <?php echo $product->agama ?>
                                                     </td>
                                                     <td width="" class="text-center">
@@ -46,11 +43,13 @@
                                                     <td width="" class="text-center">
                                                         <?php echo $product->alamat ?>
                                                     </td>
-                                                    <td width="">
+                                                    <td width="140">
                                                     <a href="<?php echo site_url('admin/siswa/edit_data/'.$product->id_siswa) ?>"
-											            class="btn btn-small text-info"><i class="fas fa-edit"></i></a>
-                                                        <a onclick="deleteConfirm('<?php echo site_url('admin/siswa/delete/'.$product->id_siswa) ?>')"
-                                                    href="#!" class="btn btn-small text-danger text-center"><i class="fas fa-trash"></i></a>
+											            class="btn btn-small btn-info font-weight-bold"><i class="fas fa-edit"></i></a>
+                                                    <a href="<?php echo site_url('admin/siswa/approval/'.$product->id_siswa) ?>"
+											            class="btn btn-small btn-primary font-weight-bold"><i class="fas fa-eye"></i></a>
+                                                    <a onclick="deleteConfirm('<?php echo site_url('admin/siswa/delete/'.$product->id_siswa) ?>')"
+                                                    href="#!" class="btn btn-small btn-danger text-center font-weight-bold"><i class="fas fa-trash"></i></a>
                                                     </td>
                                                 </tr>
                                                 <?php endforeach; ?>

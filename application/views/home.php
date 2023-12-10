@@ -41,7 +41,7 @@
               <a class="nav-item nav-link mr-3" href="#">INFORMASI</a>
               <a class="nav-item nav-link mr-3" href="<?php echo site_url('auth/login') ?>">ADMIN</a>
               <a class="nav-item nav-link mr-3 active" href="<?php echo site_url('auth/login_siswa') ?>">MASUK</a>
-              <a class="btn btn-info rounded-pill" href="#">DAFTAR</a>
+              <a class="btn btn-info rounded-pill" href="<?php echo site_url('students/registrasi/regis') ?>">DAFTAR</a>
             </div>
           </div>
         </div>
@@ -220,7 +220,7 @@
     </section>
 
     <footer>
-      <div class="text-center py-3">
+      <div class="text-center py-3 bg-light">
         <div class="container">
           <span class="text-muted">Copyright @2023 NewStudentInformation</span>
         </div>

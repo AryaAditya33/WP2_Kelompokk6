@@ -12,9 +12,11 @@ class Dashboard extends CI_Controller {
 
 	public function index()
 	{
-        $data["user"] = $this->user_model->getAll();
+        $data["siswa"] = $this->Siswa_model->getAll();
         $data['current_user'] = $this->auth_model->current_user();
         $data['total_siswa'] = $this->Siswa_model->hitungSiswa();
+        $data['total_ipa'] = $this->Siswa_model->hitungJurusanIpa();
+        $data['total_ips'] = $this->Siswa_model->hitungJurusanIps();
         $this->load->view("admin/_partials/head.php");
         $this->load->view("admin/_partials/body.php");
         $this->load->view("admin/_partials/content.php", $data);

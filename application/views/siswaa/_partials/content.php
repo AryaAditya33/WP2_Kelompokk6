@@ -67,8 +67,12 @@
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
                                     <?= htmlentities($current_user->nama_siswa)?>
                                 </span>
-                                <img class="img-profile rounded-circle mb-2"
-                                    src="<?php echo base_url('img/undraw_pic_profile.svg') ?>">
+                                <?php
+                                $avatar = $current_user->avatar ?
+                                    base_url('upload/avatar/' . $current_user->avatar)
+                                    : get_gravatar($current_user->email)
+                                ?>
+                                <img src="<?= $avatar ?>" class="img-profile rounded-circle" alt="<?= htmlentities($current_user->nama_siswa, TRUE) ?>">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

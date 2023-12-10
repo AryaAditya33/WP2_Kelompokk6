@@ -13,7 +13,7 @@
                             enctype="multipart/form-data" >
 
                             <input type="hidden" name="id" value="<?php echo $student->id_guru?>" />
-						<?php echo $this->session->flashdata('messageGuru');?>
+						<?php echo $this->session->flashdata('messageEditGuru');?>
 						<form action="<?php base_url('admin/guru/edit') ?>" method="POST"  enctype="multipart/form-data">
 							<div class="form-group row">
                             <div class="col-md-6">
