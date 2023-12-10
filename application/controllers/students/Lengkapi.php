@@ -7,6 +7,9 @@ class Lengkapi extends CI_Controller {
         $this->load->model("Siswa_model");
         $this->load->model("auths_model");
         $this->load->library('form_validation');
+		if(!$this->auths_model->current_user()){
+			redirect('auth/login_siswa');
+		}
         }
 
 	public function index()

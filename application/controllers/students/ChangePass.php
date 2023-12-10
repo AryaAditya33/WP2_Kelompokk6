@@ -8,6 +8,9 @@ class ChangePass extends CI_Controller {
         $this->load->model("siswa_model");
         $this->load->model("user_model");
         $this->load->library('form_validation');
+        if(!$this->auths_model->current_user()){
+            redirect('auth/login_siswa');
+        }
     }
 
     public function changePassword()

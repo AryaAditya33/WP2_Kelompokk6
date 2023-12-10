@@ -8,7 +8,7 @@ class Setting extends CI_Controller
 		$this->load->model('auth_model');
         $this->load->library('form_validation');
 		if (!$this->auth_model->current_user()) {
-			redirect('auth/login');
+		redirect('auth/login');
 		}
 	}
 
@@ -25,15 +25,6 @@ class Setting extends CI_Controller
 
 	}
 
-	public function upload_avatar()
-	{
-		echo "comming soon!";
-	}
-
-	public function remove_avatar()
-	{
-		echo "comming soon!";
-	}
 
 	public function edit_profile()
 	{

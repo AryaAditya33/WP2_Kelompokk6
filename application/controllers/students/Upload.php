@@ -6,6 +6,9 @@ class Upload extends CI_Controller {
 	parent::__construct();
         $this->load->model("auths_model");
         $this->load->library('form_validation');
+        if(!$this->auths_model->current_user()){
+            redirect('auth/login_siswa');
+        }
         }
 
 	public function index()

@@ -10,6 +10,9 @@ class User extends CI_Controller
         $this->load->model("User_model");
         $this->load->model("auth_model");
         $this->load->library('form_validation');
+        if(!$this->auth_model->current_user()){
+        redirect('auth/login');
+        }
     }
 
     public function index()
